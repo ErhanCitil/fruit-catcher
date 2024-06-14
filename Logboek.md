@@ -10,3 +10,5 @@ De taken die ik vandaag heb gedaan:
 - Onderzoek doen welke taal het meest efficient is om te gebruiken voor mijn game
 - Onderzoek doen naar PyGame (Python Library om videospelletjes te bouwen en te runnen in Python)
 - Een tutorial gevolgd naar PyGame
+
+Voor de rest ben ik niet tegen problemen aangelopen aangezien ik nog niet echt iets complexs voor elkaar heb gezet. 
