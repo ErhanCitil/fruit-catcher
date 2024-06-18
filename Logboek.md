@@ -20,3 +20,6 @@ De taken die ik vandaag heb gedaan:
 
 - Game Design Document ingevuld (Game uitleg, timeline en sketch)
 - Onderzoek doen naar PyGame en ook naar andere alternatieven
+
+## 18 juni 2024 | Erhan Citil
+Ik heb besloten om voor mijn project in Python versie 3.10 te gaan werken. Dit is de LTS versie van Python. De reden dat ik niet voor een nieuwere Python versie ga is, omdat ik niet te maken wil hebben met libraries die een verdere Python versie niet ondersteunen. 
