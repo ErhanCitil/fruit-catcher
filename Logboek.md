@@ -22,4 +22,11 @@ De taken die ik vandaag heb gedaan:
 - Onderzoek doen naar PyGame en ook naar andere alternatieven
 
 ## 18 juni 2024 | Erhan Citil
-Ik heb besloten om voor mijn project in Python versie 3.10 te gaan werken. Dit is de LTS versie van Python. De reden dat ik niet voor een nieuwere Python versie ga is, omdat ik niet te maken wil hebben met libraries die een verdere Python versie niet ondersteunen. 
+Ik heb besloten om voor mijn project in Python versie 3.10 te gaan werken. Dit is de LTS versie van Python. De reden dat ik niet voor een nieuwere Python versie ga is, omdat ik niet te maken wil hebben met libraries die een verdere Python versie niet ondersteunen. Vandaag heb ik een beginnetje gemaakt en een startpagina gemaakt met een play button. De tekst die het bedrijf wilt die staat er in en bedrijfslogo. Als je op play klikt dan krijg je een fruit basket te zien die je naar links en rechts kan bewegen. Morgen zal ik mijn best doen om fruit te laten vallen vanuit de lucht.
+
+De taken die ik vandaag heb gedaan:
+
+- Van start gegaan met het bouwen van mijn game (Begin scherm gemaakt met de functionaliteit dat je de game kan starten door op de button te klikken en daarna zie je een winkelmand die je kan bewegen)
+- Gitignore bestand toegevoegd aangezien ik werk met Python en daar komen veel bestanden bij kijken (virtual environment bestanden etc) die ik niet mee gepushed wil hebben.
+
+Ik liep niet echt tegen een probleem aan, het enige was dat ik niet begreep wat screen.blit deed. Ik las de documentatie maar begreep het alsnog niet, omdat er staat dat de foto's die ik mee geef getekend worden op het scherm. Dit heb ik nagevraagd bij Rob en hij heeft me uitleg gegeven. 
