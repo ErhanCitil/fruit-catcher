@@ -30,3 +30,5 @@ De taken die ik vandaag heb gedaan:
 - Gitignore bestand toegevoegd aangezien ik werk met Python en daar komen veel bestanden bij kijken (virtual environment bestanden etc) die ik niet mee gepushed wil hebben.
 
 Ik liep niet echt tegen een probleem aan, het enige was dat ik niet begreep wat screen.blit deed. Ik las de documentatie maar begreep het alsnog niet, omdat er staat dat de foto's die ik mee geef getekend worden op het scherm. Dit heb ik nagevraagd bij Rob en hij heeft me uitleg gegeven. 
+
+Vanaf morgen ben ik van plan om issues te gaan aanmaken voor de dingen die ik van plan ben om te gaan afronden zodat ik dat ook in mijn commit berichten kan noteren. Dit vind ik zelf heel erg handig.
