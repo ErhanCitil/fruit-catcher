@@ -12,3 +12,11 @@ De taken die ik vandaag heb gedaan:
 - Een tutorial gevolgd naar PyGame
 
 Voor de rest ben ik niet tegen problemen aangelopen aangezien ik nog niet echt iets complexs voor elkaar heb gezet. 
+
+## 17 juni 2024 | Erhan Citil
+Vandaag heb ik de game design document ingevuld, daarin heb ik uitgelegd hoe mijn game er uit zal zien en een timeline en sketch gemaakt. Daarnaast ben ik ook bezig geweest met het verdere onderzoek naar PyGame en naar andere libraries in Python om games mee te runnen. Wellicht dat er een library is die beter past bij de game die ik ga bouwen.
+
+De taken die ik vandaag heb gedaan:
+
+- Game Design Document ingevuld (Game uitleg, timeline en sketch)
+- Onderzoek doen naar PyGame en ook naar andere alternatieven
