@@ -36,5 +36,9 @@ Fruit Catcher is a game built using Python and the Pygame library. The objective
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
+## Local Development Environment
 
+In this piece, I will go a little deeper into what my development environment looks like while building my code.
+
+I have a MacOS 14.3.1 and I build my game in the Python language. For this, I use Python version 3.10, which is also the LTS version of Python. I chose this because most of the packages support this Python version. In addition, I have not used any other special softwares, nor are they necessary for playing this game.
        

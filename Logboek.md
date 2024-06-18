@@ -28,6 +28,7 @@ De taken die ik vandaag heb gedaan:
 
 - Van start gegaan met het bouwen van mijn game (Begin scherm gemaakt met de functionaliteit dat je de game kan starten door op de button te klikken en daarna zie je een winkelmand die je kan bewegen)
 - Gitignore bestand toegevoegd aangezien ik werk met Python en daar komen veel bestanden bij kijken (virtual environment bestanden etc) die ik niet mee gepushed wil hebben.
+- README bestand aangemaakt en aangevuld met instructies om alles te installeren en te gebruiken.
 
 Ik liep niet echt tegen een probleem aan, het enige was dat ik niet begreep wat screen.blit deed. Ik las de documentatie maar begreep het alsnog niet, omdat er staat dat de foto's die ik mee geef getekend worden op het scherm. Dit heb ik nagevraagd bij Rob en hij heeft me uitleg gegeven. 
 
