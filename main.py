@@ -15,11 +15,17 @@ start_button_img = pygame.image.load("Bijlagen voor de kandidaat/play_button.png
 logo_img = pygame.image.load(
     "Bijlagen voor de kandidaat/Bijlage 2 - Logos/Bijlage 2 - Logo zonder text.png"
 )
+fruit_basket = pygame.image.load("Bijlagen voor de kandidaat/fruit_basket.png")
 
-logo_width = 100  # breedte in pixels
-logo_height = 100  # hoogte in pixels
+logo_width = 100 
+logo_height = 100 
 logo_img = pygame.transform.scale(logo_img, (logo_width, logo_height))
 
+basket_width = fruit_basket.get_width()
+basket_height = fruit_basket.get_height()
+basket_x = screen_width // 2 - basket_width // 2
+basket_y = screen_height - basket_height - 10
+basket_speed = 4
 
 def main_menu():
     menu = True
@@ -66,24 +72,29 @@ def main_menu():
 
     return True
 
-
 def game_loop():
     running = True
+    global basket_x
     while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
 
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_LEFT] and basket_x > 0:
+            basket_x -= basket_speed
+        if keys[pygame.K_RIGHT] and basket_x < screen_width - basket_width:
+            basket_x += basket_speed
+
         screen.blit(background, (0, 0))
+        screen.blit(fruit_basket, (basket_x, basket_y))
 
         pygame.display.update()
 
     pygame.quit()
 
-
 def main():
     if main_menu():
         game_loop()
-
 
 main()
