@@ -12,6 +12,12 @@ pygame.display.set_caption("Fruit Catcher")
 # Afbeeldingen
 background = pygame.image.load('Bijlagen voor de kandidaat/background_image.jpeg')
 start_button_img = pygame.image.load('Bijlagen voor de kandidaat/play_button.png')
+logo_img = pygame.image.load('Bijlagen voor de kandidaat/Bijlage 2 - Logos/Bijlage 2 - Logo zonder text.png')
+
+logo_width = 100  # breedte in pixels
+logo_height = 100  # hoogte in pixels
+logo_img = pygame.transform.scale(logo_img, (logo_width, logo_height))
+
 
 def main_menu():
     menu = True
@@ -37,6 +43,10 @@ def main_menu():
         button_x = screen_width // 2 - start_button_img.get_width() // 2
         button_y = screen_height // 2 - start_button_img.get_height() // 2
         screen.blit(start_button_img, (button_x, button_y))
+
+        logo_x = screen_width - logo_img.get_width() - 10  # 10 pixels van de rand
+        logo_y = 10  # 10 pixels van de bovenkant
+        screen.blit(logo_img, (logo_x, logo_y))
 
         pygame.display.update()
     
