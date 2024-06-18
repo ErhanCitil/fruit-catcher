@@ -74,7 +74,8 @@ def game_loop():
             if event.type == pygame.QUIT:
                 running = False
 
-        screen.fill((255, 255, 255))
+        screen.blit(background, (0, 0))
+
         pygame.display.update()
 
     pygame.quit()
