@@ -21,14 +21,18 @@ apple_img = pygame.image.load("Bijlagen voor de kandidaat/Fruits/apple.png")
 cherry_img = pygame.image.load("Bijlagen voor de kandidaat/Fruits/cherry.png")
 pear_img = pygame.image.load("Bijlagen voor de kandidaat/Fruits/pear.png")
 
+# Rotte fruitstukken
+half_apple_img = pygame.image.load("Bijlagen voor de kandidaat/Fruits/appleHalf.png")
+half_lemon_img = pygame.image.load("Bijlagen voor de kandidaat/Fruits/lemonHalf.png")
+half_pear_img = pygame.image.load("Bijlagen voor de kandidaat/Fruits/pearHalf.png")
+
 # Fruit afbeeldingen instellingen
-fruit_width = 50
-fruit_height = 50
+fruit_width = 100
+fruit_height = 100
 
 # Schaal de fruitafbeeldingen
-fruit_images = [apple_img, cherry_img, pear_img]
 scaled_fruit_images = []
-for img in fruit_images:
+for img in [apple_img, cherry_img, pear_img, half_apple_img, half_lemon_img, half_pear_img]:
     scaled_img = pygame.transform.scale(img, (fruit_width, fruit_height))
     scaled_fruit_images.append(scaled_img)
 
