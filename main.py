@@ -51,6 +51,8 @@ basket_x = screen_width // 2 - basket_width // 2
 basket_y = screen_height - basket_height - 10
 basket_speed = 4.5
 
+score = 0
+
 def main_menu():
     menu = True
     while menu:
@@ -97,6 +99,7 @@ def main_menu():
 def game_loop():
     running = True
     global basket_x
+    global score
 
     # Lijst van fruitstukken
     fruits = []
@@ -129,8 +132,19 @@ def game_loop():
         for fruit in fruits:
             fruit["y"] += fruit_speed
 
-        # Verwijder fruitstukken die onderaan het scherm zijn
-        fruits = [fruit for fruit in fruits if fruit["y"] < screen_height]
+        # Verwijder fruitstukken die onderaan het scherm zijn of in de mand vallen
+        new_fruits = []
+        for fruit in fruits:
+            if fruit["y"] >= screen_height:
+                continue  # fruit is onderaan het scherm
+            if fruit["y"] + fruit_height >= basket_y:
+                if basket_x < fruit["x"] + fruit_width and basket_x + basket_width > fruit["x"]:
+                    # fruit is in de mand gevallen
+                    if fruit["img"] not in [scaled_fruit_images[3], scaled_fruit_images[4], scaled_fruit_images[5]]:  # geen rot fruit
+                        score += 10
+                    continue
+            new_fruits.append(fruit)
+        fruits = new_fruits
 
         # Tekent de achtergrond nadat je op play button hebt geklikt en de fruitmand op het scherm
         screen.blit(background, (0, 0))
@@ -139,6 +153,10 @@ def game_loop():
         # Teken fruitstukken
         for fruit in fruits:
             screen.blit(fruit["img"], (fruit["x"], fruit["y"]))
+
+        # Teken de score
+        score_text = pygame.font.SysFont(None, 55).render(f"Score: {score}", True, (0, 0, 0))
+        screen.blit(score_text, (10, 10))
 
         pygame.display.update()
 
