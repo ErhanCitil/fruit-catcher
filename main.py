@@ -17,6 +17,11 @@ logo_img = pygame.image.load(
 )
 fruit_basket = pygame.image.load("Bijlagen voor de kandidaat/fruit_basket.png")
 
+# Fruit afbeeldingen
+apple_img = pygame.image.load("Bijlagen voor de kandidaat/Fruits/apple.png")
+cherry_img = pygame.image.load("Bijlagen voor de kandidaat/Fruits/cherry.png")
+pear_img = pygame.image.load("Bijlagen voor de kandidaat/Fruits/pear.png")
+
 logo_width = 100 
 logo_height = 100 
 logo_img = pygame.transform.scale(logo_img, (logo_width, logo_height))
