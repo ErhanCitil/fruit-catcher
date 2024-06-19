@@ -33,3 +33,12 @@ De taken die ik vandaag heb gedaan:
 Ik liep niet echt tegen een probleem aan, het enige was dat ik niet begreep wat screen.blit deed. Ik las de documentatie maar begreep het alsnog niet, omdat er staat dat de foto's die ik mee geef getekend worden op het scherm. Dit heb ik nagevraagd bij Rob en hij heeft me uitleg gegeven. 
 
 Vanaf morgen ben ik van plan om issues te gaan aanmaken voor de dingen die ik van plan ben om te gaan afronden zodat ik dat ook in mijn commit berichten kan noteren. Dit vind ik zelf heel erg handig.
+
+## 19 juni 2024 | Erhan Citil 
+Vandaag heb ik gewerkt aan een aantal dingen. Ik heb vandaag er voor gezorgd dat er fruitstukken (gezonde en halve) uit de lucht vallen. Daarnaast heb ik ook een scoreboard gemaakt waarbij je plus punten krijgt als er fruitstukken in je fruitmand vallen. De functionaliteit dat je min punten krijgt voor halve fruitstukken heb ik nog niet geimplementeerd. Dat staat op de planning om morgen te doen. Tot slot heb ik vandaag gebruik gemaakt van issues en branches, dat vind ik zelf fijner om mee te werken, omdat je dingen van elkaar onderscheid. Daarnaast heb ik ook in plaats van in 1 bestand (main.py) te werken 2 andere bestanden gemaakt. Dit zodat het niet voor chaos zorgt in mijn main.py bestand.
+
+De taken die ik vandaag heb gedaan: 
+
+- De basis game functionaliteit toegevoegd 
+
+Vandaag ben ik niet tegen problemen aangelopen.
