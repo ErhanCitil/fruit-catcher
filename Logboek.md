@@ -42,3 +42,6 @@ De taken die ik vandaag heb gedaan:
 - De basis game functionaliteit toegevoegd 
 
 Vandaag ben ik niet tegen problemen aangelopen.
+
+## 20 juni 2024 | Erhan Citil
+Vandaag ga ik werken aan de andere functionaliteiten van de game zoals dat de bom gaat vallen uit de lucht en de game eindigt als de bom in de fruitmand valt. Daarnaast wil ik ook dat je minpunten krijgt als er halve fruitstukken in je winkelmandje vallen. Voor de rest wil ik vandaag nog een aantal unit tests schrijven voor mijn code om te valideren dat mijn code daadwerkelijk werkt. Hier kan ik bijvoorbeeld GitHub Actions aan integreren zodat het automatisch getest wordt.
