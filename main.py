@@ -7,6 +7,7 @@ def game_loop():
     running = True
     global basket_x
     global score
+    score = 0
 
     # Lijst van fruitstukken en bommen
     objects = []
