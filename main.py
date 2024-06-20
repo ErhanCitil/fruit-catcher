@@ -1,22 +1,7 @@
 import pygame
 import random
-from settings import (
-    screen,
-    background,
-    fruit_basket,
-    scaled_fruit_images,
-    bomb_img,
-    fruit_speed,
-    basket_x,
-    basket_y,
-    basket_speed,
-    score,
-    basket_width,
-    fruit_width,
-    fruit_height,
-)
+from settings import screen, background, fruit_basket, scaled_fruit_images, bomb_img, fruit_speed, basket_x, basket_y, basket_speed, score, basket_width, fruit_width, fruit_height
 from menu import main_menu, end_menu
-
 
 def game_loop():
     running = True
@@ -40,7 +25,7 @@ def game_loop():
         keys = pygame.key.get_pressed()
         if keys[pygame.K_LEFT] and basket_x > 0:
             basket_x -= basket_speed
-        if keys[pygame.K_RIGHT] and basket_x < screen.get_width() - basket_width:
+        if keys[pygame.K.RIGHT] and basket_x < screen.get_width() - basket_width:
             basket_x += basket_speed
 
         # Nieuwe objecten toevoegen (fruit of bom)
@@ -63,21 +48,14 @@ def game_loop():
         for obj in objects:
             if obj["y"] >= screen.get_height():
                 continue  # object is onderaan het scherm
-            if (
-                obj["y"] + fruit_height >= basket_y
-            ):  # controleer of het object de mand raakt
-                if (
-                    basket_x < obj["x"] + fruit_width
-                    and basket_x + basket_width > obj["x"]
-                ):
+            if obj["y"] + fruit_height >= basket_y:  # controleer of het object de mand raakt
+                if basket_x < obj["x"] + fruit_width and basket_x + basket_width > obj["x"]:
                     # object is in de mand gevallen
                     if obj["img"] == bomb_img:
-                        running = False  # beëindig het spel als een bom wordt gevangen
-                    elif obj["img"] not in [
-                        scaled_fruit_images[3],
-                        scaled_fruit_images[4],
-                        scaled_fruit_images[5],
-                    ]:  # geen rot fruit
+                        running = False 
+                    elif obj["img"] in [scaled_fruit_images[3], scaled_fruit_images[4], scaled_fruit_images[5]]: # Min punten voor halve fruitstukken
+                        score -= 10
+                    else:
                         score += 10
                     continue
             new_objects.append(obj)
@@ -92,15 +70,12 @@ def game_loop():
             screen.blit(obj["img"], (obj["x"], obj["y"]))
 
         # Teken de score
-        score_text = pygame.font.SysFont(None, 55).render(
-            f"Score: {score}", True, (0, 0, 0)
-        )
+        score_text = pygame.font.SysFont(None, 55).render(f"Score: {score}", True, (0, 0, 0))
         screen.blit(score_text, (10, 10))
 
         pygame.display.update()
 
         clock.tick(60)
-
 
 def main():
     while True:
@@ -108,7 +83,6 @@ def main():
             game_loop()
         if end_menu() == False:
             break
-    pygame.quit()
-
+    pygame.quit()  # Sluit Pygame af als we de loop verlaten
 
 main()
