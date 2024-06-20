@@ -1,6 +1,7 @@
 import pygame
 from settings import screen, background, logo_img, start_button_img
 
+
 def main_menu():
     pygame.init()
     menu = True
@@ -13,8 +14,10 @@ def main_menu():
                 mouse_x, mouse_y = event.pos
                 button_x = screen.get_width() // 2 - start_button_img.get_width() // 2
                 button_y = screen.get_height() // 2 - start_button_img.get_height() // 2
-                if (button_x <= mouse_x <= button_x + start_button_img.get_width()
-                    and button_y <= mouse_y <= button_y + start_button_img.get_height()):
+                if (
+                    button_x <= mouse_x <= button_x + start_button_img.get_width()
+                    and button_y <= mouse_y <= button_y + start_button_img.get_height()
+                ):
                     menu = False
 
         screen.blit(background, (0, 0))
@@ -26,11 +29,18 @@ def main_menu():
             "Wij lanceren je de toekomst in!", True, (0, 0, 0)
         )
         screen.blit(
-            title, (screen.get_width() // 2 - title.get_width() // 2, screen.get_height() // 3)
+            title,
+            (
+                screen.get_width() // 2 - title.get_width() // 2,
+                screen.get_height() // 3,
+            ),
         )
         screen.blit(
             paragraph,
-            (screen.get_width() // 2 - paragraph.get_width() // 2, screen.get_height() // 3 + 50),
+            (
+                screen.get_width() // 2 - paragraph.get_width() // 2,
+                screen.get_height() // 3 + 50,
+            ),
         )
 
         button_x = screen.get_width() // 2 - start_button_img.get_width() // 2
@@ -45,6 +55,7 @@ def main_menu():
 
     return True
 
+
 def end_menu():
     pygame.init()
     end = True
@@ -57,24 +68,31 @@ def end_menu():
                 mouse_x, mouse_y = event.pos
                 button_x = screen.get_width() // 2 - start_button_img.get_width() // 2
                 button_y = screen.get_height() // 2 + 50
-                if (button_x <= mouse_x <= button_x + start_button_img.get_width()
-                    and button_y <= mouse_y <= button_y + start_button_img.get_height()):
+                if (
+                    button_x <= mouse_x <= button_x + start_button_img.get_width()
+                    and button_y <= mouse_y <= button_y + start_button_img.get_height()
+                ):
                     return True
 
         screen.blit(background, (0, 0))
 
-        title = pygame.font.SysFont(None, 55).render(
-            "Game Over", True, (255, 0, 0)
-        )
+        title = pygame.font.SysFont(None, 55).render("Game Over", True, (255, 0, 0))
         paragraph = pygame.font.SysFont(None, 30).render(
             "Bedankt voor het spelen!", True, (0, 0, 0)
         )
         screen.blit(
-            title, (screen.get_width() // 2 - title.get_width() // 2, screen.get_height() // 3)
+            title,
+            (
+                screen.get_width() // 2 - title.get_width() // 2,
+                screen.get_height() // 3,
+            ),
         )
         screen.blit(
             paragraph,
-            (screen.get_width() // 2 - paragraph.get_width() // 2, screen.get_height() // 3 + 50),
+            (
+                screen.get_width() // 2 - paragraph.get_width() // 2,
+                screen.get_height() // 3 + 50,
+            ),
         )
 
         button_x = screen.get_width() // 2 - start_button_img.get_width() // 2
