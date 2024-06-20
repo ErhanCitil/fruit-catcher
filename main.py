@@ -25,7 +25,7 @@ def game_loop():
         keys = pygame.key.get_pressed()
         if keys[pygame.K_LEFT] and basket_x > 0:
             basket_x -= basket_speed
-        if keys[pygame.K.RIGHT] and basket_x < screen.get_width() - basket_width:
+        if keys[pygame.K_RIGHT] and basket_x < screen.get_width() - basket_width:
             basket_x += basket_speed
 
         # Nieuwe objecten toevoegen (fruit of bom)
