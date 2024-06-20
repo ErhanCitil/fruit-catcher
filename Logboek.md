@@ -45,3 +45,10 @@ Vandaag ben ik niet tegen problemen aangelopen.
 
 ## 20 juni 2024 | Erhan Citil
 Vandaag ga ik werken aan de andere functionaliteiten van de game zoals dat de bom gaat vallen uit de lucht en de game eindigt als de bom in de fruitmand valt. Daarnaast wil ik ook dat je minpunten krijgt als er halve fruitstukken in je winkelmandje vallen. Voor de rest wil ik vandaag nog een aantal unit tests schrijven voor mijn code om te valideren dat mijn code daadwerkelijk werkt. Hier kan ik bijvoorbeeld GitHub Actions aan integreren zodat het automatisch getest wordt.
+
+De taken die ik vandaag heb afgerond:
+- Functionaliteit voor de bom dat de game eindigt
+- Functionaliteit voor min punten voor halve fruitstukken
+- Bugs gefixt
+
+Vandaag ging wel prima alleen ik had best wel wat moeite met het coderen van de functionaliteit van de bom.
