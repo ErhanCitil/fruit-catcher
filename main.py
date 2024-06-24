@@ -1,6 +1,6 @@
 import pygame
 import random
-from settings import screen, background, fruit_basket, scaled_fruit_images, bomb_img, basket_x, basket_y, basket_speed, score, basket_width, fruit_width, fruit_height
+from settings import screen, background, fruit_basket, healthy_fruit_images, rotten_fruit_images, bomb_img, basket_x, basket_y, basket_speed, score, basket_width, fruit_width, fruit_height
 from menu import main_menu, end_menu
 
 def game_loop():
@@ -32,12 +32,11 @@ def game_loop():
         if keys[pygame.K_RIGHT] and basket_x < screen.get_width() - basket_width:
             basket_x += basket_speed
 
-        # Moeilijker maken van de game 
         difficulty_timer += 1
-        if difficulty_timer % 600 == 0: 
-            fruit_speed += 0.5 
-            next_object_time = max(20, next_object_time - 10) 
-            bomb_chance = min(0.5, bomb_chance + 0.05)  # De kans verhogen zodat een bom valt
+        if difficulty_timer % 600 == 0:  
+            fruit_speed += 0.5
+            next_object_time = max(20, next_object_time - 10)  
+            bomb_chance = min(0.5, bomb_chance + 0.05)  
 
         # Nieuwe objecten toevoegen (fruit of bom)
         next_object_time -= 1
@@ -46,7 +45,10 @@ def game_loop():
             if random.random() < bomb_chance:  # Kans op een bom
                 object_img = bomb_img
             else:
-                object_img = random.choice(scaled_fruit_images)
+                if random.random() < 0.5:  # Gelijke kans op gezond of rot fruit
+                    object_img = random.choice(healthy_fruit_images)
+                else:
+                    object_img = random.choice(rotten_fruit_images)
             objects.append({"img": object_img, "x": object_x, "y": -fruit_height})
             next_object_time = random.randint(60, 120)  # reset de timer
 
@@ -64,7 +66,7 @@ def game_loop():
                     # object is in de mand gevallen
                     if obj["img"] == bomb_img:
                         running = False  # beëindig het spel als een bom wordt gevangen
-                    elif obj["img"] in [scaled_fruit_images[3], scaled_fruit_images[4], scaled_fruit_images[5]]:  # rot fruit
+                    elif obj["img"] in rotten_fruit_images:  # rot fruit
                         score -= 10
                     else:
                         score += 10

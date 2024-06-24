@@ -12,9 +12,7 @@ pygame.display.set_caption("Fruit Catcher")
 # Afbeeldingen
 background = pygame.image.load("Bijlagen voor de kandidaat/background_image.jpeg")
 start_button_img = pygame.image.load("Bijlagen voor de kandidaat/play_button.png")
-logo_img = pygame.image.load(
-    "Bijlagen voor de kandidaat/Bijlage 2 - Logos/Bijlage 2 - Logo zonder text.png"
-)
+logo_img = pygame.image.load("Bijlagen voor de kandidaat/Bijlage 2 - Logos/Bijlage 2 - Logo zonder text.png")
 fruit_basket = pygame.image.load("Bijlagen voor de kandidaat/fruit_basket.png")
 
 # Fruit afbeeldingen
@@ -35,18 +33,18 @@ fruit_height = 100
 bomb_width = 100
 bomb_height = 100
 
-# Schaal de fruitafbeeldingen
-scaled_fruit_images = []
-for img in [
-    apple_img,
-    cherry_img,
-    pear_img,
-    half_apple_img,
-    half_lemon_img,
-    half_pear_img,
-]:
-    scaled_img = pygame.transform.scale(img, (fruit_width, fruit_height))
-    scaled_fruit_images.append(scaled_img)
+# Schaal de gezonde en rotte fruitafbeeldingen
+healthy_fruit_images = [
+    pygame.transform.scale(apple_img, (fruit_width, fruit_height)),
+    pygame.transform.scale(cherry_img, (fruit_width, fruit_height)),
+    pygame.transform.scale(pear_img, (fruit_width, fruit_height)),
+]
+
+rotten_fruit_images = [
+    pygame.transform.scale(half_apple_img, (fruit_width, fruit_height)),
+    pygame.transform.scale(half_lemon_img, (fruit_width, fruit_height)),
+    pygame.transform.scale(half_pear_img, (fruit_width, fruit_height)),
+]
 
 bomb_img = pygame.transform.scale(bomb_img, (bomb_width, bomb_height))
 
