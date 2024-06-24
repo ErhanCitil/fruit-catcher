@@ -52,3 +52,6 @@ De taken die ik vandaag heb afgerond:
 - Bugs gefixt
 
 Vandaag ging wel prima alleen ik had best wel wat moeite met het coderen van de functionaliteit van de bom.
+
+## 24 juni 2024 | Erhan Citil
+Vandaag ga ik aan de slag met dat het spelletje moeiljker worden naarmate je het speelt. Zo zullen er bijvoorbeeld meer bommen vallen en de snelheid van de fruitstukken wordt iets sneller. 
