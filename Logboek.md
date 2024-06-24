@@ -54,4 +54,4 @@ De taken die ik vandaag heb afgerond:
 Vandaag ging wel prima alleen ik had best wel wat moeite met het coderen van de functionaliteit van de bom.
 
 ## 24 juni 2024 | Erhan Citil
-Vandaag ga ik aan de slag met dat het spelletje moeiljker worden naarmate je het speelt. Zo zullen er bijvoorbeeld meer bommen vallen en de snelheid van de fruitstukken wordt iets sneller. 
+Vandaag ga ik aan de slag met dat het spelletje moeiljker worden naarmate je het speelt. Zo zullen er bijvoorbeeld meer bommen vallen en de snelheid van de fruitstukken wordt iets sneller. Daarnaast een probleem die ik ondervind die ik heb gevonden toen ik het spelletje ging testen samen met Batuhan en Djafny is dat de kans dat volle fruitstukken en halve fruitstukken vallen niet gelijk zijn. Dus ik ga dat vandaag proberen op te lossen door middel van deze 2 fruitstukken te verdelen in 2 lijsten en gewogen deling te maken. In mijn code bestand zal er dan 50/50 kans zijn tussen deze twee fruiten die er zullen vallen.
