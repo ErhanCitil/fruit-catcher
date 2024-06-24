@@ -1,6 +1,6 @@
 import pygame
 import random
-from settings import screen, background, fruit_basket, healthy_fruit_images, rotten_fruit_images, bomb_img, basket_x, basket_y, basket_speed, score, basket_width, fruit_width, fruit_height
+from settings import screen, background, fruit_basket, healthy_fruit_images, rotten_fruit_images, bomb_img, basket_x, basket_y, basket_speed, score, basket_width, fruit_width, fruit_height, basket_height
 from menu import main_menu, end_menu
 
 def game_loop():
@@ -33,10 +33,10 @@ def game_loop():
             basket_x += basket_speed
 
         difficulty_timer += 1
-        if difficulty_timer % 600 == 0:  
-            fruit_speed += 0.5
-            next_object_time = max(20, next_object_time - 10)  
-            bomb_chance = min(0.5, bomb_chance + 0.05)  
+        if difficulty_timer % 600 == 0:  # Elke 10 seconden (aangenomen dat de FPS 60 is)
+            fruit_speed += 0.5  # Verhoog de snelheid van vallend fruit
+            next_object_time = max(20, next_object_time - 10)  # Verhoog de frequentie van nieuwe objecten
+            bomb_chance = min(0.5, bomb_chance + 0.05)  # Verhoog de kans op bommen
 
         # Nieuwe objecten toevoegen (fruit of bom)
         next_object_time -= 1
@@ -61,16 +61,26 @@ def game_loop():
         for obj in objects:
             if obj["y"] >= screen.get_height():
                 continue  # object is onderaan het scherm
-            if obj["y"] + fruit_height >= basket_y:  # controleer of het object de mand raakt
-                if basket_x < obj["x"] + fruit_width and basket_x + basket_width > obj["x"]:
-                    # object is in de mand gevallen
-                    if obj["img"] == bomb_img:
-                        running = False  # beëindig het spel als een bom wordt gevangen
-                    elif obj["img"] in rotten_fruit_images:  # rot fruit
-                        score -= 10
-                    else:
-                        score += 10
-                    continue
+            
+            # Definieer de nauwkeurigere hitbox van de fruitmand
+            hitbox_width = basket_width * 0.8  # 80% van de breedte
+            hitbox_height = basket_height * 0.5  #  50% van de hoogte
+            hitbox_x = basket_x + (basket_width - hitbox_width) / 2  # centreren in de fruitmand
+            hitbox_y = basket_y + (basket_height - hitbox_height) / 2  # centreren in de fruitmand
+            
+            basket_rect = pygame.Rect(hitbox_x, hitbox_y, hitbox_width, hitbox_height)
+            # Definieer de hitbox van het vallende object
+            obj_rect = pygame.Rect(obj["x"], obj["y"], fruit_width, fruit_height)
+            
+            # Controleer op collision
+            if basket_rect.colliderect(obj_rect):
+                if obj["img"] == bomb_img:
+                    running = False  # beëindig het spel als een bom wordt gevangen
+                elif obj["img"] in rotten_fruit_images:  # rot fruit
+                    score -= 10
+                else:
+                    score += 10
+                continue
             new_objects.append(obj)
         objects = new_objects
 
