@@ -78,3 +78,9 @@ Vandaag ga ik aan de slag met het implementeren van functionaliteiten waardoor h
 #### Test uitslagen 24 juni 
 
 Batuhan en Djafny hebben mijn spelletje getest en we kwamen er samen achter dat er geen gelijkheid was bij het vallen van de fruitstukken en halve fruitstukken. Daarnaast was de hitbox nog niet goed geconfigureerd. Dit is heel erg vervelend, omdat als er een bom valt naast je fruitmand dan wordt het spelletje beeindigt.
+
+## Dag 7: Documentatie afmaken
+
+Datum: 25-06-2024
+
+Vandaag ben ik van plan om de puntjes op de i te zetten voor mijn game en documentatie.

@@ -3,6 +3,9 @@ from settings import screen, background, logo_img, start_button_img
 
 
 def main_menu():
+    """
+    Dit is de menu die je te zien krijgt voordat de game start, als je op de button klikt dan begint het spelletje
+    """
     pygame.init()
     menu = True
     while menu:
@@ -57,6 +60,9 @@ def main_menu():
 
 
 def end_menu():
+    """
+    Dit is het menu die je te zien krijgt na de afloop van de game, je kan het spelletje opnieuw opstarten.
+    """
     pygame.init()
     end = True
     while end:
