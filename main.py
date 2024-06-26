@@ -64,7 +64,7 @@ def game_loop():
             
             # Definieer de nauwkeurigere hitbox van de fruitmand
             hitbox_width = basket_width * 0.8  # 80% van de breedte
-            hitbox_height = basket_height * 0.5  #  50% van de hoogte
+            hitbox_height = basket_height * 0.5  # 50% van de hoogte
             hitbox_x = basket_x + (basket_width - hitbox_width) / 2  # centreren in de fruitmand
             hitbox_y = basket_y + (basket_height - hitbox_height) / 2  # centreren in de fruitmand
             
@@ -83,6 +83,9 @@ def game_loop():
                 continue
             new_objects.append(obj)
         objects = new_objects
+
+        if score <= -100:
+            running = False
 
         # Tekent de achtergrond nadat je op play button hebt geklikt en de fruitmand op het scherm
         screen.blit(background, (0, 0))
