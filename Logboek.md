@@ -83,4 +83,8 @@ Batuhan en Djafny hebben mijn spelletje getest en we kwamen er samen achter dat 
 
 Datum: 25-06-2024
 
-Vandaag ben ik van plan om de puntjes op de i te zetten voor mijn game en documentatie.
+Vandaag ben ik van plan om de puntjes op de i te zetten voor mijn game en documentatie. Morgen heb ik een presentatie van mijn game en daarvoor ga ik me voorbereiden.
+
+#### **Taken**:
+- Overdrachtsdocument ingevuld
+- PowerPoint gemaakt voor de presentatie van morgen
