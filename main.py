@@ -1,6 +1,6 @@
 import pygame
 import random
-from settings import screen, background, fruit_basket, healthy_fruit_images, rotten_fruit_images, bomb_img, basket_x, basket_y, basket_speed, score, basket_width, fruit_width, fruit_height, basket_height
+from settings import screen, background, fruit_basket, healthy_fruit_images, rotten_fruit_images, bomb_img, basket_x, basket_y, basket_speed, score, basket_width, fruit_width, fruit_height, basket_height, fruit_speed
 from menu import main_menu, end_menu
 
 def game_loop():
@@ -8,7 +8,6 @@ def game_loop():
     global basket_x
     global score
     score = 0
-    fruit_speed = 3  # Start snelheid van vallend fruit
     difficulty_timer = 0  # Timer om de moeilijkheid te verhogen
     bomb_chance = 0.1  # Start kans op een bom
 
