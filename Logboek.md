@@ -88,3 +88,7 @@ Vandaag ben ik van plan om de puntjes op de i te zetten voor mijn game en docume
 #### **Taken**:
 - Overdrachtsdocument ingevuld
 - PowerPoint gemaakt voor de presentatie van morgen
+
+## Dag 8: Eindresultaat
+
+Vandaag ga ik mijn eindresultaat opleveren aan mevrouw Jacobs.
